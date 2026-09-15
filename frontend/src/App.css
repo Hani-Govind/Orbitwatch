@@ -1,0 +1,596 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #08090b;
+  color: #e6e6e6;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.app {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(255,255,255,.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.018) 1px, transparent 1px),
+    #08090b;
+
+  background-size: 40px 40px;
+}
+
+.topbar {
+  height: 82px;
+  border-bottom: 1px solid #292c31;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 48px;
+
+  background: rgba(8,9,11,.94);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  width: 42px;
+  height: 42px;
+
+  border: 1px solid #d6d6d6;
+
+  display: grid;
+  place-items: center;
+
+  font-family: Orbitron;
+  font-size: 12px;
+}
+
+.brand h1 {
+  margin: 0;
+
+  font-family: Orbitron;
+  font-size: 20px;
+  letter-spacing: 4px;
+}
+
+.brand span {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #777;
+}
+
+.mission-info {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.mission-info div:not(.live) {
+  display: flex;
+  flex-direction: column;
+}
+
+.mission-info small {
+  font-size: 9px;
+  color: #686b70;
+  letter-spacing: 2px;
+}
+
+.mission-info strong {
+  font-family: Orbitron;
+  font-size: 11px;
+  margin-top: 4px;
+}
+
+.live {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-family: Orbitron;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.live i,
+.indicator {
+  width: 7px;
+  height: 7px;
+  background: #d71920;
+  border-radius: 50%;
+  display: inline-block;
+
+  box-shadow: 0 0 10px rgba(215,25,32,.7);
+}
+
+main {
+  max-width: 1400px;
+  margin: auto;
+  padding: 55px 48px;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 45px;
+}
+
+.eyebrow {
+  font-family: Orbitron;
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: #777;
+}
+
+.hero h2 {
+  font-family: Orbitron;
+  font-size: clamp(40px, 6vw, 76px);
+  line-height: .95;
+  margin: 18px 0;
+
+  letter-spacing: 2px;
+}
+
+.hero h2 span {
+  color: #d71920;
+}
+
+.description {
+  color: #85888d;
+  font-size: 17px;
+  max-width: 430px;
+}
+
+.system-status {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.status-ring {
+  width: 150px;
+  height: 150px;
+
+  border-radius: 50%;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid #3b3e43;
+
+  box-shadow:
+    inset 0 0 30px rgba(215,25,32,.08),
+    0 0 35px rgba(0,0,0,.5);
+}
+
+.status-ring > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.status-ring strong {
+  font-family: Orbitron;
+  font-size: 31px;
+}
+
+.status-ring span {
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: #777;
+}
+
+.system-status small {
+  color: #666;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.system-status h3 {
+  font-family: Orbitron;
+  margin: 8px 0 3px;
+  letter-spacing: 2px;
+}
+
+.system-status p {
+  margin: 0;
+  color: #777;
+  font-size: 12px;
+}
+
+.normal {
+  color: #d5d5d5;
+}
+
+.danger {
+  color: #d71920;
+}
+
+.telemetry-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.metric,
+.panel {
+  border: 1px solid #292c31;
+  background: rgba(14,15,18,.88);
+}
+
+.metric {
+  padding: 20px;
+}
+
+.metric-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  color: #777;
+  font-family: Orbitron;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.metric strong {
+  display: block;
+
+  font-family: Orbitron;
+  font-size: 29px;
+
+  margin-top: 17px;
+}
+
+.metric strong small {
+  font-size: 11px;
+  color: #666;
+  margin-left: 5px;
+}
+
+.metric-line {
+  height: 2px;
+  background: #25272b;
+  margin-top: 18px;
+}
+
+.metric.warning .metric-line {
+  background: #d71920;
+  box-shadow: 0 0 10px rgba(215,25,32,.4);
+}
+
+.metric.warning .indicator {
+  background: #d71920;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 12px;
+
+  margin-top: 12px;
+}
+
+.panel {
+  padding: 22px;
+  min-height: 280px;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+
+  padding-bottom: 17px;
+  border-bottom: 1px solid #292c31;
+
+  font-family: Orbitron;
+  font-size: 9px;
+  letter-spacing: 2px;
+
+  color: #aaa;
+}
+
+.panel-header span:last-child {
+  color: #555;
+}
+
+.chart {
+  height: 190px;
+
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+
+  padding: 20px 5px;
+
+  position: relative;
+}
+
+.bar {
+  flex: 1;
+
+  background: #666;
+
+  min-height: 15px;
+
+  transition: height .4s;
+}
+
+.bar-danger {
+  background: #d71920;
+  box-shadow: 0 0 12px rgba(215,25,32,.45);
+}
+
+.chart-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+
+  border-top: 1px dashed #282b30;
+}
+
+.chart-labels {
+  display: flex;
+  justify-content: space-between;
+
+  color: #555;
+  font-family: Orbitron;
+  font-size: 8px;
+}
+
+.ml-score {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+
+  padding: 30px 0;
+}
+
+.ml-score div {
+  border-left: 2px solid #333;
+  padding-left: 15px;
+}
+
+.ml-score small {
+  display: block;
+
+  color: #666;
+  font-family: Orbitron;
+  font-size: 8px;
+  letter-spacing: 2px;
+
+  margin-bottom: 10px;
+}
+
+.ml-score strong {
+  font-family: Orbitron;
+  font-size: 15px;
+}
+
+.model-description {
+  color: #777;
+  line-height: 1.6;
+  font-size: 13px;
+
+  border-top: 1px solid #292c31;
+  padding-top: 18px;
+}
+
+.lower-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+
+  margin-top: 12px;
+}
+
+.gyro-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 12px;
+
+  padding-top: 25px;
+}
+
+.gyro {
+  padding: 15px;
+  background: #111216;
+}
+
+.gyro span {
+  display: block;
+
+  color: #666;
+
+  font-family: Orbitron;
+  font-size: 8px;
+  letter-spacing: 2px;
+}
+
+.gyro strong {
+  display: block;
+
+  font-family: Orbitron;
+  font-size: 20px;
+
+  margin: 12px 0;
+}
+
+.gyro-bar {
+  height: 2px;
+  background: #292c31;
+}
+
+.gyro-bar div {
+  height: 100%;
+  background: #aaa;
+}
+
+.event-panel {
+  min-height: auto;
+}
+
+.event {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 17px 0;
+
+  border-bottom: 1px solid #202226;
+
+  font-size: 13px;
+}
+
+.event i {
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: #777;
+}
+
+.event time {
+  margin-left: auto;
+
+  color: #555;
+
+  font-family: Orbitron;
+  font-size: 8px;
+}
+
+.scan-button {
+  display: block;
+
+  margin: 25px auto 0;
+
+  padding: 15px 35px;
+
+  border: 1px solid #4a4d52;
+  background: transparent;
+
+  color: #ccc;
+
+  font-family: Orbitron;
+  font-size: 10px;
+
+  letter-spacing: 2px;
+
+  cursor: pointer;
+
+  transition: .2s;
+}
+
+.scan-button:hover {
+  background: #d71920;
+  border-color: #d71920;
+  color: white;
+
+  box-shadow: 0 0 25px rgba(215,25,32,.25);
+}
+
+.scanning {
+  opacity: .5;
+}
+
+footer {
+  padding: 25px 48px;
+
+  border-top: 1px solid #292c31;
+
+  display: flex;
+  justify-content: space-between;
+
+  color: #45474b;
+
+  font-family: Orbitron;
+  font-size: 8px;
+  letter-spacing: 2px;
+}
+
+footer span {
+  color: #777;
+}
+
+.loading {
+  height: 100vh;
+
+  background: #08090b;
+
+  display: grid;
+  place-items: center;
+
+  align-content: center;
+}
+
+.loading .crawl {
+  font-family: Orbitron;
+  font-size: 35px;
+  letter-spacing: 7px;
+  color: #d71920;
+}
+
+.loading p {
+  font-family: Orbitron;
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: #555;
+}
+
+@media (max-width: 900px) {
+
+  .topbar {
+    padding: 0 20px;
+  }
+
+  .mission-info div:not(.live) {
+    display: none;
+  }
+
+  main {
+    padding: 35px 20px;
+  }
+
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  .telemetry-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dashboard-grid,
+  .lower-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 550px) {
+
+  .telemetry-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gyro-grid {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
