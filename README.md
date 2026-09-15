@@ -271,20 +271,3 @@ The model should identify this as an anomalous telemetry pattern and produce a s
 
 ---
 
-## Future Improvements
-
-* Real satellite telemetry datasets
-* Time-series anomaly detection
-* LSTM/Transformer based forecasting
-* Automated anomaly alerts
-* Telemetry history and trend analysis
-* Satellite mission profiles
-* Multiple spacecraft monitoring
-* Cloud deployment
-* Historical anomaly replay
-
----
-
-## Disclaimer
-
-OrbitWatch is an educational and research prototype using simulated satellite telemetry. It is not intended for operational spacecraft monitoring or real mission-critical decision making.
